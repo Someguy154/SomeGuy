@@ -1,4 +1,4 @@
-# The website for the Card (create a raw disk) program
-An .img file creator for Windows 98.
+# The website for the card (create a raw disk) program.
+An disk image file creator for Windows 98 and above.
 <br>
 <img src="images\screenshot.png">
