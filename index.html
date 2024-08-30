@@ -9,6 +9,7 @@
         body {
             background-color: #226286;
             background-image: url(nyan.svg);
+            background-size: 50% 30%;
             background-repeat: no-repeat;
             color: white;
             text-align: center;
@@ -31,10 +32,13 @@
         }
 
         .projectlink {
+            text-decoration-line: none;
+            color: white;
             text-align: center;
             padding: 10px;
             padding-left: 30px;
             padding-right: 30px;
+            box-shadow: 0px 0px 3px black;
             border: 3px solid white;
             transition: 0.3s;
             border-radius: 10px;
@@ -44,17 +48,27 @@
         .projectlink:hover {
             background-color: white;
             color: black;
+            text-decoration-line: none;
+            box-shadow: 0px 0px 16px rgb(255, 255, 255);
             padding-left: 40px;
             border-radius: 50px;
             padding-right: 40px;
             border-color: transparent;
         }
 
-        .button {
-            display: contents;
+        .projectlink:active {
+            color: white;
+            box-shadow: 0px 0px 16px rgb(71, 64, 64);
+            transform: perspective(200px) rotateX(30deg) !important;
+            background-color: rgb(71, 64, 64);
         }
 
+
+
+
         .text {
+            font-size: 50px;
+            text-shadow: 0px 0px 5px rgb(0, 0, 0);
             transform: translateY(-1px);
             transform: perspective(200px) rotateX(40deg);
             animation: textanim 1.3s infinite
@@ -79,6 +93,7 @@
                 transform: perspective(200px) rotateX(270deg);
             }
 
+            
             100% {
                 color: white;
                 transform: translateY(-1px);
@@ -155,16 +170,48 @@
             transition: all 0.3s ease-in-out;
         }
 
+
+
         img {
-            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px black;
         }
 
+        img:hover {
+            transform: translateY(-1px);
+            transform: perspective(200px) rotateY(5deg);
+            box-shadow: 1px 1px 3px black;
+        }
+        .button {
+            transition: all 0.3s ease-in-out;
+            padding: 10px;
+        }
+        
+
+
         .imgbutton *:hover {
+            transform: translateY(-1px);
+            transform: perspective(200px) rotateX(30deg);
+            box-shadow: 1px 1px 3px black;
         }
 
         #cat {
             height: 50px;
             width: 100px;
+        }
+
+        hr.solid {
+            width: 700px;
+            border-top: 3px solid #bbb;
+            border-radius: 5px;
+        }
+
+
+        footer {
+            padding: 10px;
+            position: relative;
+            background-color: #555555;
         }
 
         .projectlinks {
@@ -174,7 +221,6 @@
         <h1 class="text">Potato!
         </h1>
           
-          <h1 class="text">OS: Windows 7, 8.1 and LMDE</h1>
         <p>Discord:</p>
         <a href="https://discord.gg/qCJXdpTQjP" class="imgbutton">
             <img height="30px" src="https://dcbadge.limes.pink/api/server/https://discord.gg/qCJXdpTQjP"></a>
@@ -194,9 +240,18 @@
         <div class="projectlinks">
             <div class="button">
                 <a href="/Program/Card" class="projectlink">Card</a>
+                <p>A image file creator for Windows 98.</p>
+                <img src="images/screenshot.png" class="flipimage">
             </div>
             <div class="button">
                 <a href="https://github.com/winvistalover/UnionCGCDiscordBot" class="projectlink">Union</a>
+                <p>A cross guild chatting bot.</p>
+                <img src="images/Union.png" class="flipimage">
+            </div>
+            <div class="button">
+                <a href="https://discord.com/oauth2/authorize?client_id=1276128183384805448&permissions=8&integration_type=0&scope=bot" class="projectlink">CMD</a>
+                <p>Control an entire Linux VM.</p>
+                <img src="images/CMD.png" class="flipimage">
             </div>
         </div>
     </body>
