@@ -8,7 +8,7 @@ Body {
     text-shadow: 0px 0px 3px black;
     opacity: 100%;
     animation: loada 0.5s ease-in-out;
-    background-image: url("untitled44.png");
+    background-image: url("/PotatoOS/untitled44.png");
 }
 
 ol {
@@ -74,7 +74,7 @@ p {
     color: white;
     /* border: 1px solid #b6b6b6; */
     background-color: #727272;
-    background-image: url("bbg.png");
+    background-image: url("/PotatoOS/bbg.png");
 }
 
 #download:hover {
@@ -82,7 +82,7 @@ p {
 }
 
 #download:active {
-    background-image: url("bbgh.png");
+    background-image: url("/PotatoOS/bbgh.png");
     background-color: #868686;
 }
 
@@ -92,7 +92,7 @@ p {
     padding-left: 0px;
     padding-right: 0px;
     border-radius: 10px;
-    background-image: url("toolbarbg.png");
+    background-image: url("/PotatoOS/toolbarbg.png");
     overflow: hidden;
     margin: 0;
 }
@@ -105,7 +105,7 @@ p {
 
 #ilink:hover {
     background-color: #494949;
-    background-image: url("toolbarbbg.png");
+    background-image: url("/PotatoOS/toolbarbbg.png");
 }
 
 @keyframes meow {

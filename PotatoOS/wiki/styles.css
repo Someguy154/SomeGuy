@@ -8,7 +8,7 @@ Body {
     text-shadow: 0px 0px 3px black;
     opacity: 100%;
     animation: loada 0.5s ease-in-out;
-    background-image: url("posbg2web.png");
+    background-image: url("/PotatoOS/wiki/posbg2web.png");
 }
 
 ol {
@@ -74,7 +74,7 @@ p {
     color: white;
     /* border: 1px solid #b6b6b6; */
     background-color: #727272;
-    background-image: url("bbg.png");
+    background-image: url("/PotatoOS/wiki/bbg.png");
 }
 
 #download:hover {
@@ -82,7 +82,7 @@ p {
 }
 
 #download:active {
-    background-image: url("bbgh.png");
+    background-image: url("/PotatoOS/wiki/bbgh.png");
     background-color: #868686;
 }
 
@@ -91,14 +91,14 @@ p {
     padding-left: 0px;
     padding-right: 0px;
     border-radius: 10px;
-    background-image: url("toolbarbg.png");
+    background-image: url("/PotatoOS/wiki/toolbarbg.png");
     background-size: contain;
     overflow: hidden;
     margin: 0;
 }
 
 .menu input {
-    background-image: url("toolbarbbg.png");
+    background-image: url("/PotatoOS/wiki/toolbarbbg.png");
     border: 0.5px solid rgba(255, 255, 255, 0.555);
     border-radius: 50px;
     margin-left: 71%;
@@ -121,7 +121,7 @@ p {
 
 #ilink:hover {
     background-color: #494949;
-    background-image: url("toolbarbbg.png");
+    background-image: url("/PotatoOS/wiki/toolbarbbg.png");
 }
 
 @keyframes meow {
