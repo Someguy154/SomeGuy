@@ -1,0 +1,652 @@
+body {
+  background-image: url(bg.png);
+  background-size: cover;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+a {
+  display: inline-block;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  transform: perspective(200px) rotateX(720deg);
+  opacity: 0.5;
+}
+
+a:active {
+  transform: perspective(200px) rotateX(720deg);
+}
+
+.carmelo {
+  background-color: #00b894;
+  border: 8px solid #117b63;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.carmelo:hover {
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.pi {
+  background-color: #930e00;
+  border: 8px solid #3f0600;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.pi:hover {
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.rediblesky {
+  background-color: #fd6a6b;
+  border: 8px solid #e15758;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.rediblesky:hover {
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.orcapet {
+  background-color: #afafaf;
+  border: 8px solid #76767f;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.orcapet:hover {
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.winbo {
+  background-color: yellow;
+  border: 8px solid #8B8000;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.winbo:hover {
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.eryquicc {
+  background-color: #117b63;
+  border: 8px solid #0b4e3f;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s;
+  border-radius: 8px;
+}
+.eryquicc:hover {
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.steeldev{
+  background-color: blue;
+  border: 8px solid darkblue;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.steeldev:hover{
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.glowy{
+  background-color: #feff70;
+  border: 8px solid #e1d75b;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.glowy:hover{
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.calibrato{
+  background-color: black;
+  border: 8px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: transform 2s, opacity 2s ease-in-out;
+  border-radius: 8px;
+}
+.calibrato:hover{
+  transform: perspective(200px) rotateX(360deg);
+  opacity: 0.2;
+}
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+    
+.icon {
+  height: 40px;
+  margin-right: 32px;
+}
+    
+.topbar h1 {
+  font-size: 26px;
+  margin: 0;
+  color: #e0e0e0;
+}
+.topbar .buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+    
+.topbar .button {
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.badge {
+  height: 16px;
+  object-fit: contain;
+}
+
+.topbar .button:hover {
+  background-color: #005a9e;
+  transform: scale(1.05);
+}
+.square {
+  display: flex;
+  padding: 20px;
+  background: linear-gradient(90deg, rgba(9,9,121,0.5) 35%, rgba(2,0,36,0.5) 51%, rgba(0,212,255,0.5) 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  display: flex;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  max-height: 300px;
+}
+.square h2 {
+   color: #80c0ff;
+}
+.squarefriends {
+  display: grid | inline-grid;
+  padding: 20px;
+  background: linear-gradient(90deg, rgba(9,9,121,0.5) 35%, rgba(2,0,36,0.5) 51%, rgba(0,212,255,0.5) 100%);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  max-height: 300px;
+}
+.squarefriends h2 {
+   color: #80c0ff;
+}
+footer {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.toaster {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background-image: url("img/toaster-sprite.gif");
+}
+
+.toast {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background-image: url("img/toast1.gif");
+}
+
+.t1 {
+  -webkit-animation: flap .2s steps(4) infinite alternate, fly 10s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate, fly 10s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate, fly 10s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate, fly 10s linear infinite;
+  animation: flap .2s steps(4) infinite alternate, fly 10s linear infinite;
+}
+
+.t2 {
+  -webkit-animation: flap .2s steps(4) infinite alternate-reverse, fly 16s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate-reverse, fly 16s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate-reverse, fly 16s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate-reverse, fly 16s linear infinite;
+  animation: flap .2s steps(4) infinite alternate-reverse, fly 16s linear infinite;
+}
+
+.t3 {
+  -webkit-animation: flap .2s steps(4) infinite alternate, fly 24s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate, fly 24s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate, fly 24s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate, fly 24s linear infinite;
+  animation: flap .2s steps(4) infinite alternate, fly 24s linear infinite;
+}
+
+.t4 {
+  -webkit-animation: flap .2s steps(4) infinite alternate, fly 10s 5s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate, fly 10s 5s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate, fly 10s 5s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate, fly 10s 5s linear infinite;
+  animation: flap .2s steps(4) infinite alternate, fly 10s 5s linear infinite;
+}
+
+.t5 {
+  -webkit-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite;
+  animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 4s linear infinite;
+}
+
+.t6 {
+  -webkit-animation: flap .2s steps(4) infinite alternate, fly 24s 8s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate, fly 24s 8s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate, fly 24s 8s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate, fly 24s 8s linear infinite;
+  animation: flap .2s steps(4) infinite alternate, fly 24s 8s linear infinite;
+}
+
+.t7 {
+  -webkit-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite;
+  animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 12s linear infinite;
+}
+
+.t8 {
+  -webkit-animation: flap .2s steps(4) infinite alternate, fly 24s 16s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate, fly 24s 16s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate, fly 24s 16s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate, fly 24s 16s linear infinite;
+  animation: flap .2s steps(4) infinite alternate, fly 24s 16s linear infinite;
+}
+
+.t9 {
+  -webkit-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite;
+  -moz-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite;
+  -ms-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite;
+  -o-animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite;
+  animation: flap .2s steps(4) infinite alternate-reverse, fly 24s 20s linear infinite;
+}
+
+.tst1 {
+  -webkit-animation: fly 10s linear infinite;
+  -moz-animation: fly 10s linear infinite;
+  -ms-animation: fly 10s linear infinite;
+  -o-animation: fly 10s linear infinite;
+  animation: fly 10s linear infinite;
+}
+
+.tst2 {
+  -webkit-animation: fly 16s linear infinite;
+  -moz-animation: fly 16s linear infinite;
+  -ms-animation: fly 16s linear infinite;
+  -o-animation: fly 16s linear infinite;
+  animation: fly 16s linear infinite;
+}
+
+.tst3 {
+  -webkit-animation: fly 24s linear infinite;
+  -moz-animation: fly 24s linear infinite;
+  -ms-animation: fly 24s linear infinite;
+  -o-animation: fly 24s linear infinite;
+  animation: fly 24s linear infinite;
+}
+
+.tst4 {
+  -webkit-animation: fly 24s 12s linear infinite;
+  -moz-animation: fly 24s 12s linear infinite;
+  -ms-animation: fly 24s 12s linear infinite;
+  -o-animation: fly 24s 12s linear infinite;
+  animation: fly 24s 12s linear infinite;
+}
+
+.p6 {
+  right: -2%;
+  top: -10%;
+}
+
+.p7 {
+  right: 10%;
+  top: -12%;
+}
+
+.p8 {
+  right: 20%;
+  top: -18%;
+}
+
+.p9 {
+  right: 30%;
+  top: -13%;
+}
+
+.p10 {
+  right: 40%;
+  top: -17%;
+}
+
+.p11 {
+  right: 50%;
+  top: -11%;
+}
+
+.p12 {
+  right: 60%;
+  top: -20%;
+}
+
+/* Right side, from top to bottom */
+.p13 {
+  right: -10%;
+  top: 10%;
+}
+
+.p14 {
+  right: -13%;
+  top: 20%;
+}
+
+.p15 {
+  right: -17%;
+  top: 30%;
+}
+
+.p16 {
+  right: -15%;
+  top: 50%;
+}
+
+.p17 {
+  right: -20%;
+  top: 70%;
+}
+
+/* Batch 2 (-20% to -40%) */
+/* Top edge, from right to left */
+.p18 {
+  right: 0%;
+  top: -26%;
+}
+
+.p19 {
+  right: 10%;
+  top: -20%;
+}
+
+.p20 {
+  right: 20%;
+  top: -36%;
+}
+
+.p21 {
+  right: 30%;
+  top: -24%;
+}
+
+.p22 {
+  right: 40%;
+  top: -33%;
+}
+
+.p23 {
+  right: 60%;
+  top: -40%;
+}
+
+/* Right side, from top to bottom */
+.p24 {
+  right: -26%;
+  top: 10%;
+}
+
+.p25 {
+  right: -36%;
+  top: 30%;
+}
+
+.p26 {
+  right: -29%;
+  top: 50%;
+}
+
+/* Batch 3 (-40% to -60%)*/
+/* Top edge, from right to left */
+.p27 {
+  right: 0;
+  top: -46%;
+}
+
+.p28 {
+  right: 10%;
+  top: -56%;
+}
+
+.p29 {
+  right: 20%;
+  top: -49%;
+}
+
+.p30 {
+  right: 30%;
+  top: -60%;
+}
+
+/* Right side, from top to bottom */
+.p31 {
+  right: -46%;
+  top: 10%;
+}
+
+.p32 {
+  right: -56%;
+  top: 20%;
+}
+
+.p33 {
+  right: -49%;
+  top: 30%;
+}
+
+/* Flapping animation */
+@-webkit-keyframes flap {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -256px;
+  }
+}
+
+@-moz-keyframes flap {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -256px;
+  }
+}
+
+@-o-keyframes flap {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -256px;
+  }
+}
+
+@keyframes flap {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -256px;
+  }
+}
+
+@-webkit-keyframes fly {
+  0% {
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    top: 100%;
+    right: 100%;
+    transform: translate(-100%, -100%);
+  }
+}
+
+
+@-moz-keyframes fly {
+  0% {
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    top: 100%;
+    right: 100%;
+    transform: translate(-100%, -100%);
+  }
+}
+
+
+@-o-keyframes fly {
+  0% {
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    top: 100%;
+    right: 100%;
+    transform: translate(-100%, -100%);
+  }
+}
+
+
+@keyframes fly {
+  0% {
+    top: 0;
+    right: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    top: 100%;
+    right: 100%;
+    transform: translate(-100%, -100%);
+  }
+}
+
+.wrapper {
+  position: absolute;
+  right: 0;
+}
