@@ -3,13 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download OS and Software</title>
+    <title>Download OSes and Software</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styling for buttons */
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px 0;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .file-manager {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <p id="download-info">You have used 0 of your 25 downloads! Your limit will reset on October 14, 2024 at 1:08:36 PM PDT</p>
+            <h1>Download Center</h1>
+            <p id="download-info">You have used 0 of your 25 downloads! Your limit will reset on October 14, 2024, at 1:08:36 PM PDT</p>
         </header>
 
         <div class="file-manager">
@@ -19,226 +48,57 @@
 
             <!-- Windows Family -->
             <h2>Windows Operating Systems</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://archive.org/download/windows-95/Windows95.ISO" download onclick="trackDownload(event)">Windows 95</a></td>
-                        <td>500 MB</td>
-                        <td>August 24, 1995</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://archive.org/download/WinXPProSP3x86/WinXPProSP3.iso" download onclick="trackDownload(event)">Windows XP</a></td>
-                        <td>700 MB</td>
-                        <td>October 25, 2001</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://software-download.microsoft.com/pr/WIN7_SP1_ULT_EN_DVD.iso" download onclick="trackDownload(event)">Windows 7</a></td>
-                        <td>3.1 GB</td>
-                        <td>July 22, 2009</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.microsoft.com/en-us/software-download/windows10ISO" download onclick="trackDownload(event)">Windows 10</a></td>
-                        <td>4.5 GB</td>
-                        <td>July 29, 2015</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.microsoft.com/en-us/software-download/windows11" download onclick="trackDownload(event)">Windows 11</a></td>
-                        <td>5.2 GB</td>
-                        <td>October 5, 2021</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <a class="download-button" href="https://archive.org/download/windows-95/Windows95.ISO" download onclick="trackDownload(event)">Download Windows 95 (500 MB)</a>
+                <a class="download-button" href="https://archive.org/download/WinXPProSP3x86/WinXPProSP3.iso" download onclick="trackDownload(event)">Download Windows XP (700 MB)</a>
+                <a class="download-button" href="https://software-download.microsoft.com/pr/WIN7_SP1_ULT_EN_DVD.iso" download onclick="trackDownload(event)">Download Windows 7 (3.1 GB)</a>
+                <a class="download-button" href="https://www.microsoft.com/en-us/software-download/windows10ISO" download onclick="trackDownload(event)">Download Windows 10 (4.5 GB)</a>
+                <a class="download-button" href="https://www.microsoft.com/en-us/software-download/windows11" download onclick="trackDownload(event)">Download Windows 11 (5.2 GB)</a>
+            </div>
 
             <!-- macOS Family -->
             <h2>macOS Operating Systems</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://updates.cdn-apple.com/2020/macos/061-86291-20201112-1A7D7A92-A798-4D89-BA94-2C558C9A9304/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Big Sur</a></td>
-                        <td>12.18 GB</td>
-                        <td>November 12, 2020</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://updates.cdn-apple.com/2021/macos/001-79699-20211025-BCA9D6AC-4A1A-4CE7-A1A6-18EF987648B4/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Monterey</a></td>
-                        <td>11.34 GB</td>
-                        <td>October 25, 2021</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://updates.cdn-apple.com/2022/macos/061-47729-20221024-EB39CDBC-2E7B-4DA0-B87F-1B8375816066/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Ventura</a></td>
-                        <td>11.70 GB</td>
-                        <td>October 24, 2022</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://updates.cdn-apple.com/2018/macos/041-91795-20180924-2A36F30D-C2B1-4C64-95FC-C0557D48B698/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Mojave</a></td>
-                        <td>6.04 GB</td>
-                        <td>September 24, 2018</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://updates.cdn-apple.com/2019/macos/061-00418-20191007-7D43F11E-7079-48F9-918A-74F210694DCD/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Catalina</a></td>
-                        <td>8.09 GB</td>
-                        <td>October 7, 2019</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <a class="download-button" href="https://updates.cdn-apple.com/2020/macos/061-86291-20201112-1A7D7A92-A798-4D89-BA94-2C558C9A9304/InstallAssistant.pkg" download onclick="trackDownload(event)">Download macOS Big Sur (12.18 GB)</a>
+                <a class="download-button" href="https://updates.cdn-apple.com/2021/macos/001-79699-20211025-BCA9D6AC-4A1A-4CE7-A1A6-18EF987648B4/InstallAssistant.pkg" download onclick="trackDownload(event)">Download macOS Monterey (11.34 GB)</a>
+                <a class="download-button" href="https://updates.cdn-apple.com/2022/macos/061-47729-20221024-EB39CDBC-2E7B-4DA0-B87F-1B8375816066/InstallAssistant.pkg" download onclick="trackDownload(event)">Download macOS Ventura (11.70 GB)</a>
+                <a class="download-button" href="https://updates.cdn-apple.com/2018/macos/041-91795-20180924-2A36F30D-C2B1-4C64-95FC-C0557D48B698/InstallAssistant.pkg" download onclick="trackDownload(event)">Download macOS Mojave (6.04 GB)</a>
+                <a class="download-button" href="https://updates.cdn-apple.com/2019/macos/061-00418-20191007-7D43F11E-7079-48F9-918A-74F210694DCD/InstallAssistant.pkg" download onclick="trackDownload(event)">Download macOS Catalina (8.09 GB)</a>
+            </div>
 
-            <!-- Linux Family -->
+            <!-- Linux Distributions -->
             <h2>Linux Distributions</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso" download onclick="trackDownload(event)">Ubuntu 22.04 LTS</a></td>
-                        <td>2.7 GB</td>
-                        <td>April 21, 2022</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://download.fedoraproject.org/pub/fedora/linux/releases/37/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.7.iso" download onclick="trackDownload(event)">Fedora 37</a></td>
-                        <td>1.9 GB</td>
-                        <td>November 15, 2022</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-11.7.0-amd64-DVD-1.iso" download onclick="trackDownload(event)">Debian 11</a></td>
-                        <td>3.6 GB</td>
-                        <td>August 14, 2021</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://archlinux.org/iso/2024.01.01/archlinux-2024.01.01-x86_64.iso" download onclick="trackDownload(event)">Arch Linux</a></td>
-                        <td>900 MB</td>
-                        <td>Rolling Release</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-x86_64-Current.iso" download onclick="trackDownload(event)">openSUSE Leap 15.4</a></td>
-                        <td>4.3 GB</td>
-                        <td>June 8, 2022</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://downloads.kali.org/kali-linux-2023.2/kali-linux-2023.2-installer-amd64.iso" download onclick="trackDownload(event)">Kali Linux 2023.2</a></td>
-                        <td>3.5 GB</td>
-                        <td>May 16, 2023</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <a class="download-button" href="https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso" download onclick="trackDownload(event)">Download Ubuntu 22.04 LTS (2.7 GB)</a>
+                <a class="download-button" href="https://download.fedoraproject.org/pub/fedora/linux/releases/37/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.7.iso" download onclick="trackDownload(event)">Download Fedora 37 (1.9 GB)</a>
+                <a class="download-button" href="https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-11.7.0-amd64-DVD-1.iso" download onclick="trackDownload(event)">Download Debian 11 (3.6 GB)</a>
+                <a class="download-button" href="https://archlinux.org/iso/2024.01.01/archlinux-2024.01.01-x86_64.iso" download onclick="trackDownload(event)">Download Arch Linux (900 MB)</a>
+                <a class="download-button" href="https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-x86_64-Current.iso" download onclick="trackDownload(event)">Download openSUSE Leap 15.4 (4.3 GB)</a>
+                <a class="download-button" href="https://downloads.kali.org/kali-linux-2023.2/kali-linux-2023.2-installer-amd64.iso" download onclick="trackDownload(event)">Download Kali Linux 2023.2 (3.5 GB)</a>
+            </div>
 
             <!-- Browsers -->
             <h2>Browsers</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://dl.google.com/chrome/install/googlechromestandaloneenterprise64.msi" download onclick="trackDownload(event)">Google Chrome</a></td>
-                        <td>85 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://download-installer.cdn.mozilla.net/pub/firefox/releases/117.0/win64/en-US/Firefox%20Setup%20117.0.exe" download onclick="trackDownload(event)">Mozilla Firefox</a></td>
-                        <td>55 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://laptop-updates.brave.com/latest/winx64" download onclick="trackDownload(event)">Brave Browser</a></td>
-                        <td>87 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <a class="download-button" href="https://dl.google.com/chrome/install/googlechromestandaloneenterprise64.msi" download onclick="trackDownload(event)">Download Google Chrome (85 MB)</a>
+                <a class="download-button" href="https://download-installer.cdn.mozilla.net/pub/firefox/releases/117.0/win64/en-US/Firefox%20Setup%20117.0.exe" download onclick="trackDownload(event)">Download Mozilla Firefox (55 MB)</a>
+                <a class="download-button" href="https://laptop-updates.brave.com/latest/winx64" download onclick="trackDownload(event)">Download Brave Browser (87 MB)</a>
+            </div>
 
             <!-- Development Tools -->
             <h2>Development Tools</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://aka.ms/vs/17/release/vs_installer.exe" download onclick="trackDownload(event)">Visual Studio 2022</a></td>
-                        <td>1.5 MB (Bootstrapper)</td>
-                        <td>Latest</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://update.code.visualstudio.com/latest/win32-x64/stable" download onclick="trackDownload(event)">VS Code for Windows</a></td>
-                        <td>75 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://update.code.visualstudio.com/latest/linux-deb-x64/stable" download onclick="trackDownload(event)">VS Code for Linux (Debian/Ubuntu)</a></td>
-                        <td>80 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://update.code.visualstudio.com/latest/darwin/stable" download onclick="trackDownload(event)">VS Code for macOS</a></td>
-                        <td>94 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <a class="download-button" href="https://aka.ms/vs/17/release/vs_installer.exe" download onclick="trackDownload(event)">Download Visual Studio 2022 (1.5 MB)</a>
+                <a class="download-button" href="https://update.code.visualstudio.com/latest/win32-x64/stable" download onclick="trackDownload(event)">Download VS Code for Windows (75 MB)</a>
+                <a class="download-button" href="https://update.code.visualstudio.com/latest/linux-deb-x64/stable" download onclick="trackDownload(event)">Download VS Code for Linux (80 MB)</a>
+                <a class="download-button" href="https://update.code.visualstudio.com/latest/darwin/stable" download onclick="trackDownload(event)">Download VS Code for macOS (94 MB)</a>
+            </div>
 
             <!-- Useful Software -->
             <h2>Useful Software</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://ftp.gimp.org/pub/gimp/v2.10/windows/gimp-2.10.30-setup.exe" download onclick="trackDownload(event)">GIMP (Image Editor)</a></td>
-                        <td>245 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://download.blender.org/release/Blender3.5/blender-3.5.0-windows-x64.msi" download onclick="trackDownload(event)">Blender (3D Graphics Tool)</a></td>
-                        <td>260 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://www.7-zip.org/a/7z2107-x64.exe" download onclick="trackDownload(event)">7-Zip (Archiving Tool)</a></td>
-                        <td>1.4 MB</td>
-                        <td>Latest</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <a class="download-button" href="https://ftp.gimp.org/pub/gimp/v2.10/windows/gimp-2.10.30-setup.exe" download onclick="trackDownload(event)">Download GIMP (Image Editor) (245 MB)</a>
+                <a class="download-button" href="https://download.blender.org/release/Blender3.5/blender-3.5.0-windows-x64.msi" download onclick="trackDownload(event)">Download Blender (3D Graphics Tool) (260 MB)</a>
+                <a class="download-button" href="https://www.7-zip.org/a/7z2107-x64.exe" download onclick="trackDownload(event)">Download 7-Zip (Archiving Tool) (1.4 MB)</a>
+            </div>
         </div>
-
-        <footer>
-            <p>Download responsibly!</p>
-            <p>Report bugs & corrupted files or suggest software: <a href="mailto:contact@someg.uy">contact@enderman.ch</a></p>
-            <p>&copy; Someguy Corp 2022-2024</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
