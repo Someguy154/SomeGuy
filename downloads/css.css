@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(bg.png); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Change text color for better visibility */
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold color for headings */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #007bff; /* A bright color to stand out */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.download-container {
+    margin: 15px 0;
+}
+
+select {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444; /* Dark background for dropdown */
+    color: white; /* White text for dropdown */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc; /* Light gray for footer text */
+}
