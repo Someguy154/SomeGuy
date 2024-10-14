@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .category {
+            margin-bottom: 30px;
+        }
+        .download-section {
+            margin-bottom: 20px;
+        }
+        .file {
+            margin: 10px 0;
+        }
+        .file label {
+            margin-right: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        select {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Download Center</h1>
+
+    <!-- Windows ISOs -->
+    <div class="category">
+        <h2>Windows ISOs</h2>
+        <div class="download-section">
+            <label for="windowsIso">Select Windows Version:</label>
+            <select id="windowsIso">
+                <option value="win10">Windows 10</option>
+                <option value="win11">Windows 11</option>
+                <option value="win7">Windows 7</option>
+            </select>
+            <button onclick="downloadWindowsISO()">Download</button>
+        </div>
+    </div>
+
+    <!-- Linux Distros -->
+    <div class="category">
+        <h2>Linux Distros</h2>
+        <div class="download-section">
+            <label for="linuxDistro">Select Linux Distro:</label>
+            <select id="linuxDistro">
+                <option value="ubuntu">Ubuntu</option>
+                <option value="fedora">Fedora</option>
+                <option value="debian">Debian</option>
+                <option value="arch">Arch Linux</option>
+            </select>
+            <button onclick="downloadLinuxDistro()">Download</button>
+        </div>
+    </div>
+
+    <!-- Software -->
+    <div class="category">
+        <h2>Software</h2>
+        <div class="download-section">
+            <label for="softwareType">Select Software:</label>
+            <select id="softwareType">
+                <option value="vlc">VLC Media Player</option>
+                <option value="chrome">Google Chrome</option>
+                <option value="libreoffice">LibreOffice</option>
+                <option value="gimp">GIMP</option>
+            </select>
+            <button onclick="downloadSoftware()">Download</button>
+        </div>
+    </div>
+
+    <script>
+        // Windows ISO download function
+        function downloadWindowsISO() {
+            const iso = document.getElementById('windowsIso').value;
+            let fileUrl = '';
+
+            if (iso === 'win10') {
+                fileUrl = 'path-to-your-file/windows10.iso';
+            } else if (iso === 'win11') {
+                fileUrl = 'path-to-your-file/windows11.iso';
+            } else if (iso === 'win7') {
+                fileUrl = 'path-to-your-file/windows7.iso';
+            }
+
+            if (fileUrl) {
+                window.location.href = fileUrl;
+            } else {
+                alert('Please select a Windows ISO');
+            }
+        }
+
+        // Linux Distro download function
+        function downloadLinuxDistro() {
+            const distro = document.getElementById('linuxDistro').value;
+            let fileUrl = '';
+
+            if (distro === 'ubuntu') {
+                fileUrl = 'path-to-your-file/ubuntu.iso';
+            } else if (distro === 'fedora') {
+                fileUrl = 'path-to-your-file/fedora.iso';
+            } else if (distro === 'debian') {
+                fileUrl = 'path-to-your-file/debian.iso';
+            } else if (distro === 'arch') {
+                fileUrl = 'path-to-your-file/arch.iso';
+            }
+
+            if (fileUrl) {
+                window.location.href = fileUrl;
+            } else {
+                alert('Please select a Linux Distro');
+            }
+        }
+
+        // Software download function
+        function downloadSoftware() {
+            const software = document.getElementById('softwareType').value;
+            let fileUrl = '';
+
+            if (software === 'vlc') {
+                fileUrl = 'path-to-your-file/vlc.exe';
+            } else if (software === 'chrome') {
+                fileUrl = 'path-to-your-file/chrome.exe';
+            } else if (software === 'libreoffice') {
+                fileUrl = 'path-to-your-file/libreoffice.exe';
+            } else if (software === 'gimp') {
+                fileUrl = 'path-to-your-file/gimp.exe';
+            }
+
+            if (fileUrl) {
+                window.location.href = fileUrl;
+            } else {
+                alert('Please select software');
+            }
+        }
+    </script>
+</body>
+</html>
