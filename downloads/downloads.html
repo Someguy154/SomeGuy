@@ -50,114 +50,131 @@
 <body>
     <h1>Download Center</h1>
 
-    <!-- Windows ISOs -->
+    <!-- Operating Systems -->
     <div class="category">
-        <h2>Windows ISOs</h2>
+        <h2>Operating Systems</h2>
+
+        <!-- Windows ISOs -->
+        <h3>Windows</h3>
         <div class="download-section">
-            <label for="windowsIso">Select Windows Version:</label>
-            <select id="windowsIso">
+            <label for="windowsOs">Select Windows Version:</label>
+            <select id="windowsOs">
+                <option value="win95">Windows 95</option>
+                <option value="winxp">Windows XP</option>
+                <option value="win7">Windows 7</option>
                 <option value="win10">Windows 10</option>
                 <option value="win11">Windows 11</option>
-                <option value="win7">Windows 7</option>
             </select>
-            <button onclick="downloadWindowsISO()">Download</button>
+            <button onclick="downloadWindowsOS()">Download</button>
         </div>
-    </div>
+        <div class="file">
+            <h4>Direct Links:</h4>
+            <a href="https://archive.org/download/Win95/Windows_95.iso" download>Windows 95 ISO</a><br>
+            <a href="https://archive.org/download/Windows_XP_Professional/Windows_XP_Professional.iso" download>Windows XP ISO</a><br>
+            <a href="https://software-download.microsoft.com/ftpcache/Win7_64Bit.iso" download>Windows 7 ISO</a><br>
+            <a href="https://software-download.microsoft.com/ftpcache/Win10_21H2_English_x64.iso" download>Windows 10 ISO</a><br>
+            <a href="https://software-download.microsoft.com/ftpcache/Win11_21H2_English_x64.iso" download>Windows 11 ISO</a>
+        </div>
 
-    <!-- Linux Distros -->
-    <div class="category">
-        <h2>Linux Distros</h2>
+        <!-- macOS ISOs -->
+        <h3>macOS</h3>
         <div class="download-section">
-            <label for="linuxDistro">Select Linux Distro:</label>
-            <select id="linuxDistro">
+            <label for="macOs">Select macOS Version:</label>
+            <select id="macOs">
+                <option value="bigsur">Big Sur</option>
+                <option value="monterey">Monterey</option>
+                <option value="ventura">Ventura</option>
+                <option value="mojave">Mojave</option>
+                <option value="catalina">Catalina</option>
+            </select>
+            <button onclick="downloadMacOS()">Download</button>
+        </div>
+        <div class="file">
+            <h4>Direct Links:</h4>
+            <a href="https://archive.org/download/Big_Sur/Big_Sur.iso" download>Big Sur ISO</a><br>
+            <a href="https://archive.org/download/Monterey/Monterey.iso" download>Monterey ISO</a><br>
+            <a href="https://archive.org/download/Ventura/Ventura.iso" download>Ventura ISO</a><br>
+            <a href="https://archive.org/download/Mojave/Mojave.iso" download>Mojave ISO</a><br>
+            <a href="https://archive.org/download/Catalina/Catalina.iso" download>Catalina ISO</a>
+        </div>
+
+        <!-- Linux Distros -->
+        <h3>Linux</h3>
+        <div class="download-section">
+            <label for="linuxOs">Select Linux Distro:</label>
+            <select id="linuxOs">
                 <option value="ubuntu">Ubuntu</option>
                 <option value="fedora">Fedora</option>
                 <option value="debian">Debian</option>
                 <option value="arch">Arch Linux</option>
+                <option value="opensuse">openSUSE</option>
+                <option value="kali">Kali Linux</option>
             </select>
-            <button onclick="downloadLinuxDistro()">Download</button>
+            <button onclick="downloadLinuxOS()">Download</button>
+        </div>
+        <div class="file">
+            <h4>Direct Links:</h4>
+            <a href="https://releases.ubuntu.com/22.04/ubuntu-22.04-desktop-amd64.iso" download>Ubuntu ISO</a><br>
+            <a href="https://download.fedoraproject.org/pub/fedora/linux/releases/37/Spins/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.6.iso" download>Fedora ISO</a><br>
+            <a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso" download>Debian ISO</a><br>
+            <a href="https://archlinux.org/iso/latest/archlinux-x86_64.iso" download>Arch Linux ISO</a><br>
+            <a href="https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-NET-x86_64.iso" download>openSUSE ISO</a><br>
+            <a href="https://cdimage.kali.org/kali-2023.1/kali-linux-2023.1-installer-amd64.iso" download>Kali Linux ISO</a>
         </div>
     </div>
 
-    <!-- Software -->
+    <!-- Browsers -->
     <div class="category">
-        <h2>Software</h2>
+        <h2>Browsers</h2>
         <div class="download-section">
-            <label for="softwareType">Select Software:</label>
-            <select id="softwareType">
-                <option value="vlc">VLC Media Player</option>
+            <label for="browser">Select Browser:</label>
+            <select id="browser">
                 <option value="chrome">Google Chrome</option>
-                <option value="libreoffice">LibreOffice</option>
-                <option value="gimp">GIMP</option>
+                <option value="firefox">Mozilla Firefox</option>
+                <option value="brave">Brave</option>
             </select>
-            <button onclick="downloadSoftware()">Download</button>
+            <button onclick="downloadBrowser()">Download</button>
+        </div>
+        <div class="file">
+            <h3>Direct Links:</h3>
+            <a href="https://dl.google.com/chrome/install/standalonesetup64.exe" download>Google Chrome</a><br>
+            <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US" download>Mozilla Firefox</a><br>
+            <a href="https://laptop-updates.brave.com/download/latest/BraveSetup.exe" download>Brave</a>
         </div>
     </div>
 
-    <script>
-        // Windows ISO download function
-        function downloadWindowsISO() {
-            const iso = document.getElementById('windowsIso').value;
-            let fileUrl = '';
+    <!-- Development Tools -->
+    <div class="category">
+        <h2>Development Tools</h2>
+        <div class="download-section">
+            <label for="devTools">Select Development Tool:</label>
+            <select id="devTools">
+                <option value="vs2022">Visual Studio 2022</option>
+                <option value="vscode">VS Code</option>
+            </select>
+            <button onclick="downloadDevTools()">Download</button>
+        </div>
+        <div class="file">
+            <h3>Direct Links:</h3>
+            <a href="https://visualstudio.microsoft.com/vs/older-downloads/" download>Visual Studio 2022</a><br>
+            <a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64" download>VS Code for Windows</a><br>
+            <a href="https://code.visualstudio.com/sha/download?build=stable&os=linux-x64" download>VS Code for Linux</a><br>
+            <a href="https://code.visualstudio.com/sha/download?build=stable&os=darwin" download>VS Code for macOS</a>
+        </div>
+    </div>
 
-            if (iso === 'win10') {
-                fileUrl = 'path-to-your-file/windows10.iso';
-            } else if (iso === 'win11') {
-                fileUrl = 'path-to-your-file/windows11.iso';
-            } else if (iso === 'win7') {
-                fileUrl = 'path-to-your-file/windows7.iso';
-            }
-
-            if (fileUrl) {
-                window.location.href = fileUrl;
-            } else {
-                alert('Please select a Windows ISO');
-            }
-        }
-
-        // Linux Distro download function
-        function downloadLinuxDistro() {
-            const distro = document.getElementById('linuxDistro').value;
-            let fileUrl = '';
-
-            if (distro === 'ubuntu') {
-                fileUrl = 'path-to-your-file/ubuntu.iso';
-            } else if (distro === 'fedora') {
-                fileUrl = 'path-to-your-file/fedora.iso';
-            } else if (distro === 'debian') {
-                fileUrl = 'path-to-your-file/debian.iso';
-            } else if (distro === 'arch') {
-                fileUrl = 'path-to-your-file/arch.iso';
-            }
-
-            if (fileUrl) {
-                window.location.href = fileUrl;
-            } else {
-                alert('Please select a Linux Distro');
-            }
-        }
-
-        // Software download function
-        function downloadSoftware() {
-            const software = document.getElementById('softwareType').value;
-            let fileUrl = '';
-
-            if (software === 'vlc') {
-                fileUrl = 'path-to-your-file/vlc.exe';
-            } else if (software === 'chrome') {
-                fileUrl = 'path-to-your-file/chrome.exe';
-            } else if (software === 'libreoffice') {
-                fileUrl = 'path-to-your-file/libreoffice.exe';
-            } else if (software === 'gimp') {
-                fileUrl = 'path-to-your-file/gimp.exe';
-            }
-
-            if (fileUrl) {
-                window.location.href = fileUrl;
-            } else {
-                alert('Please select software');
-            }
-        }
-    </script>
-</body>
-</html>
+    <!-- Useful Software -->
+    <div class="category">
+        <h2>Useful Software</h2>
+        <div class="download-section">
+            <label for="usefulSoftware">Select Software:</label>
+            <select id="usefulSoftware">
+                <option value="gimp">GIMP</option>
+                <option value="blender">Blender</option>
+                <option value="7zip">7-Zip</option>
+            </select>
+            <button onclick="downloadUsefulSoftware()">Download</button>
+        </div>
+        <div class="file">
+            <h3>Direct Links:</h3>
+            <a href
