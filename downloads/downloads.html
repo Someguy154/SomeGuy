@@ -5,159 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download OS and Software</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styling for buttons and layout */
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px 0;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-button:hover {
+            background-color: #218838;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .file-manager {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .download-container {
+            margin: 15px 0;
+        }
+
+        select {
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <p id="download-info">Select the downloads you want!</p>
+            <h1>Download Center</h1>
         </header>
 
         <div class="file-manager">
-            <div class="search-bar">
-                <input type="text" placeholder="Type to search...">
+            <!-- Operating Systems -->
+            <div class="download-container">
+                <label for="os-select">Operating Systems:</label>
+                <select id="os-select">
+                    <option value="https://archive.org/download/windows-95/Windows95.ISO">Windows 95</option>
+                    <option value="https://archive.org/download/WinXPProSP3x86/WinXPProSP3.iso">Windows XP</option>
+                    <option value="https://software-download.microsoft.com/pr/WIN7_SP1_ULT_EN_DVD.iso">Windows 7</option>
+                    <option value="https://www.microsoft.com/en-us/software-download/windows10ISO">Windows 10</option>
+                    <option value="https://www.microsoft.com/en-us/software-download/windows11">Windows 11</option>
+                    <option value="https://updates.cdn-apple.com/2020/macos/061-86291-20201112-1A7D7A92-A798-4D89-BA94-2C558C9A9304/InstallAssistant.pkg">macOS Big Sur</option>
+                    <option value="https://updates.cdn-apple.com/2021/macos/001-79699-20211025-BCA9D6AC-4A1A-4CE7-A1A6-18EF987648B4/InstallAssistant.pkg">macOS Monterey</option>
+                    <option value="https://updates.cdn-apple.com/2022/macos/061-47729-20221024-EB39CDBC-2E7B-4DA0-B87F-1B8375816066/InstallAssistant.pkg">macOS Ventura</option>
+                    <option value="https://updates.cdn-apple.com/2018/macos/041-91795-20180924-2A36F30D-C2B1-4C64-95FC-C0557D48B698/InstallAssistant.pkg">macOS Mojave</option>
+                    <option value="https://updates.cdn-apple.com/2019/macos/061-00418-20191007-7D43F11E-7079-48F9-918A-74F210694DCD/InstallAssistant.pkg">macOS Catalina</option>
+                    <option value="https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso">Ubuntu</option>
+                    <option value="https://download.fedoraproject.org/pub/fedora/linux/releases/37/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.7.iso">Fedora</option>
+                    <option value="https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-11.7.0-amd64-DVD-1.iso">Debian</option>
+                    <option value="https://archlinux.org/iso/2024.01.01/archlinux-2024.01.01-x86_64.iso">Arch Linux</option>
+                    <option value="https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-x86_64-Current.iso">openSUSE</option>
+                    <option value="https://downloads.kali.org/kali-linux-2023.2/kali-linux-2023.2-installer-amd64.iso">Kali Linux</option>
+                </select>
+                <a class="download-button" href="#" onclick="downloadSoftware('os-select')">Download</a>
             </div>
 
-            <!-- Windows Family -->
-            <h2>Windows Operating Systems</h2>
-            <form id="download-form">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Select</th>
-                            <th>Name</th>
-                            <th>Size</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox" name="windows" value="Windows95" data-link="https://archive.org/download/windows-95/Windows95.ISO"></td>
-                            <td>Windows 95</td>
-                            <td>500 MB</td>
-                            <td>August 24, 1995</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="windows" value="WindowsXP" data-link="https://archive.org/download/WinXPProSP3x86/WinXPProSP3.iso"></td>
-                            <td>Windows XP</td>
-                            <td>700 MB</td>
-                            <td>October 25, 2001</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="windows" value="Windows7" data-link="https://software-download.microsoft.com/pr/WIN7_SP1_ULT_EN_DVD.iso"></td>
-                            <td>Windows 7</td>
-                            <td>3.1 GB</td>
-                            <td>July 22, 2009</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="windows" value="Windows10" data-link="https://www.microsoft.com/en-us/software-download/windows10ISO"></td>
-                            <td>Windows 10</td>
-                            <td>4.5 GB</td>
-                            <td>July 29, 2015</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="windows" value="Windows11" data-link="https://www.microsoft.com/en-us/software-download/windows11"></td>
-                            <td>Windows 11</td>
-                            <td>5.2 GB</td>
-                            <td>October 5, 2021</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Browsers -->
+            <div class="download-container">
+                <label for="browsers-select">Browsers:</label>
+                <select id="browsers-select">
+                    <option value="https://dl.google.com/chrome/install/googlechromestandaloneenterprise64.msi">Google Chrome</option>
+                    <option value="https://download-installer.cdn.mozilla.net/pub/firefox/releases/117.0/win64/en-US/Firefox%20Setup%20117.0.exe">Mozilla Firefox</option>
+                    <option value="https://laptop-updates.brave.com/latest/winx64">Brave</option>
+                </select>
+                <a class="download-button" href="#" onclick="downloadSoftware('browsers-select')">Download</a>
+            </div>
 
-                <!-- macOS Family -->
-                <h2>macOS Operating Systems</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Select</th>
-                            <th>Name</th>
-                            <th>Size</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox" name="macos" value="BigSur" data-link="https://updates.cdn-apple.com/2020/macos/061-86291-20201112-1A7D7A92-A798-4D89-BA94-2C558C9A9304/InstallAssistant.pkg"></td>
-                            <td>macOS Big Sur</td>
-                            <td>12.18 GB</td>
-                            <td>November 12, 2020</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="macos" value="Monterey" data-link="https://updates.cdn-apple.com/2021/macos/001-79699-20211025-BCA9D6AC-4A1A-4CE7-A1A6-18EF987648B4/InstallAssistant.pkg"></td>
-                            <td>macOS Monterey</td>
-                            <td>11.34 GB</td>
-                            <td>October 25, 2021</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="macos" value="Ventura" data-link="https://updates.cdn-apple.com/2022/macos/061-47729-20221024-EB39CDBC-2E7B-4DA0-B87F-1B8375816066/InstallAssistant.pkg"></td>
-                            <td>macOS Ventura</td>
-                            <td>11.70 GB</td>
-                            <td>October 24, 2022</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="macos" value="Mojave" data-link="https://updates.cdn-apple.com/2018/macos/041-91795-20180924-2A36F30D-C2B1-4C64-95FC-C0557D48B698/InstallAssistant.pkg"></td>
-                            <td>macOS Mojave</td>
-                            <td>6.04 GB</td>
-                            <td>September 24, 2018</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="macos" value="Catalina" data-link="https://updates.cdn-apple.com/2019/macos/061-00418-20191007-7D43F11E-7079-48F9-918A-74F210694DCD/InstallAssistant.pkg"></td>
-                            <td>macOS Catalina</td>
-                            <td>8.09 GB</td>
-                            <td>October 7, 2019</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Development Tools -->
+            <div class="download-container">
+                <label for="devtools-select">Development Tools:</label>
+                <select id="devtools-select">
+                    <option value="https://aka.ms/vs/17/release/vs_installer.exe">Visual Studio 2022</option>
+                    <option value="https://update.code.visualstudio.com/latest/win32-x64/stable">VS Code for Windows</option>
+                    <option value="https://update.code.visualstudio.com/latest/linux-deb-x64/stable">VS Code for Linux (Debian/Ubuntu)</option>
+                    <option value="https://update.code.visualstudio.com/latest/darwin/stable">VS Code for macOS</option>
+                </select>
+                <a class="download-button" href="#" onclick="downloadSoftware('devtools-select')">Download</a>
+            </div>
 
-                <!-- Linux Family -->
-                <h2>Linux Distributions</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Select</th>
-                            <th>Name</th>
-                            <th>Size</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox" name="linux" value="Ubuntu" data-link="https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso"></td>
-                            <td>Ubuntu 22.04 LTS</td>
-                            <td>2.7 GB</td>
-                            <td>April 21, 2022</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="linux" value="Fedora" data-link="https://download.fedoraproject.org/pub/fedora/linux/releases/37/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.7.iso"></td>
-                            <td>Fedora 37</td>
-                            <td>1.9 GB</td>
-                            <td>November 15, 2022</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="linux" value="Debian" data-link="https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-11.7.0-amd64-DVD-1.iso"></td>
-                            <td>Debian 11</td>
-                            <td>3.6 GB</td>
-                            <td>August 14, 2021</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="linux" value="ArchLinux" data-link="https://archlinux.org/iso/2024.01.01/archlinux-2024.01.01-x86_64.iso"></td>
-                            <td>Arch Linux</td>
-                            <td>900 MB</td>
-                            <td>Rolling Release</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="linux" value="OpenSUSE" data-link="https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-x86_64-Current.iso"></td>
-                            <td>openSUSE Leap 15.4</td>
-                            <td>4.3 GB</td>
-                            <td>June 8, 2022</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="linux" value="Kali" data-link="https://downloads.kali.org/kali-linux-2023.2/kali-linux-2023.2-installer-amd64.iso"></td>
-                            <td>Kali Linux 2023.2</td>
-                            <td>3.5 GB</td>
-                            <td>May 16, 2023</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Useful Software -->
+            <div class="download-container">
+                <label for="useful-software-select">Useful Software:</label>
+                <select id="useful-software-select">
+                    <option value="https://ftp.gimp.org/pub/gimp/v2.10/windows/gimp-2.10.30-setup.exe">GIMP</option>
+                    <option value="https://download.blender.org/release/Blender3.5/blender-3.5.0-windows-x64.msi">Blender</option>
+                    <option value="https://www.7-zip.org/a/7z2107-x64.exe">7-Zip</option>
+                </select>
+                <a class="download-button" href="#" onclick="downloadSoftware('useful-software-select')">Download</a>
+            </div>
+        </div>
 
-                <!-- Browsers -->
-                <h2>Brows
+        <footer>
+        </footer>
+    </div>
+
+    <script>
+        function downloadSoftware(selectId) {
+            var selectElement = document.getElementById(selectId);
+            var selectedValue = selectElement.value;
+            window.open(selectedValue, '_blank');
+        }
+    </script>
+</body>
+</html>
