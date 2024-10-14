@@ -3,178 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Center</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        .category {
-            margin-bottom: 30px;
-        }
-        .download-section {
-            margin-bottom: 20px;
-        }
-        .file {
-            margin: 10px 0;
-        }
-        .file label {
-            margin-right: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: blue;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        select {
-            padding: 5px;
-            margin-right: 10px;
-        }
-        button {
-            padding: 5px 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <title>Download OS and Software</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Download Center</h1>
+    <div class="container">
+        <header>
+            <p id="download-info">You have used 0 of your 25 downloads! Your limit will reset on October 14, 2024 at 1:08:36 PM PDT</p>
+        </header>
 
-    <!-- Operating Systems -->
-    <div class="category">
-        <h2>Operating Systems</h2>
+        <div class="file-manager">
+            <div class="search-bar">
+                <input type="text" placeholder="Type to search...">
+            </div>
 
-        <!-- Windows ISOs -->
-        <h3>Windows</h3>
-        <div class="download-section">
-            <label for="windowsOs">Select Windows Version:</label>
-            <select id="windowsOs">
-                <option value="win95">Windows 95</option>
-                <option value="winxp">Windows XP</option>
-                <option value="win7">Windows 7</option>
-                <option value="win10">Windows 10</option>
-                <option value="win11">Windows 11</option>
-            </select>
-            <button onclick="downloadWindowsOS()">Download</button>
-        </div>
-        <div class="file">
-            <h4>Direct Links:</h4>
-            <a href="https://archive.org/download/Win95/Windows_95.iso" download>Windows 95 ISO</a><br>
-            <a href="https://archive.org/download/Windows_XP_Professional/Windows_XP_Professional.iso" download>Windows XP ISO</a><br>
-            <a href="https://software-download.microsoft.com/ftpcache/Win7_64Bit.iso" download>Windows 7 ISO</a><br>
-            <a href="https://software-download.microsoft.com/ftpcache/Win10_21H2_English_x64.iso" download>Windows 10 ISO</a><br>
-            <a href="https://software-download.microsoft.com/ftpcache/Win11_21H2_English_x64.iso" download>Windows 11 ISO</a>
+            <!-- Windows Family -->
+            <h2>Windows Operating Systems</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://archive.org/download/windows-95/Windows95.ISO" download onclick="trackDownload(event)">Windows 95</a></td>
+                        <td>500 MB</td>
+                        <td>August 24, 1995</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://archive.org/download/WinXPProSP3x86/WinXPProSP3.iso" download onclick="trackDownload(event)">Windows XP</a></td>
+                        <td>700 MB</td>
+                        <td>October 25, 2001</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://software-download.microsoft.com/pr/WIN7_SP1_ULT_EN_DVD.iso" download onclick="trackDownload(event)">Windows 7</a></td>
+                        <td>3.1 GB</td>
+                        <td>July 22, 2009</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.microsoft.com/en-us/software-download/windows10ISO" download onclick="trackDownload(event)">Windows 10</a></td>
+                        <td>4.5 GB</td>
+                        <td>July 29, 2015</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.microsoft.com/en-us/software-download/windows11" download onclick="trackDownload(event)">Windows 11</a></td>
+                        <td>5.2 GB</td>
+                        <td>October 5, 2021</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- macOS Family -->
+            <h2>macOS Operating Systems</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://updates.cdn-apple.com/2020/macos/061-86291-20201112-1A7D7A92-A798-4D89-BA94-2C558C9A9304/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Big Sur</a></td>
+                        <td>12.18 GB</td>
+                        <td>November 12, 2020</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://updates.cdn-apple.com/2021/macos/001-79699-20211025-BCA9D6AC-4A1A-4CE7-A1A6-18EF987648B4/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Monterey</a></td>
+                        <td>11.34 GB</td>
+                        <td>October 25, 2021</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://updates.cdn-apple.com/2022/macos/061-47729-20221024-EB39CDBC-2E7B-4DA0-B87F-1B8375816066/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Ventura</a></td>
+                        <td>11.70 GB</td>
+                        <td>October 24, 2022</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://updates.cdn-apple.com/2018/macos/041-91795-20180924-2A36F30D-C2B1-4C64-95FC-C0557D48B698/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Mojave</a></td>
+                        <td>6.04 GB</td>
+                        <td>September 24, 2018</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://updates.cdn-apple.com/2019/macos/061-00418-20191007-7D43F11E-7079-48F9-918A-74F210694DCD/InstallAssistant.pkg" download onclick="trackDownload(event)">macOS Catalina</a></td>
+                        <td>8.09 GB</td>
+                        <td>October 7, 2019</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Linux Family -->
+            <h2>Linux Distributions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso" download onclick="trackDownload(event)">Ubuntu 22.04 LTS</a></td>
+                        <td>2.7 GB</td>
+                        <td>April 21, 2022</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://download.fedoraproject.org/pub/fedora/linux/releases/37/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.7.iso" download onclick="trackDownload(event)">Fedora 37</a></td>
+                        <td>1.9 GB</td>
+                        <td>November 15, 2022</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-11.7.0-amd64-DVD-1.iso" download onclick="trackDownload(event)">Debian 11</a></td>
+                        <td>3.6 GB</td>
+                        <td>August 14, 2021</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://archlinux.org/iso/2024.01.01/archlinux-2024.01.01-x86_64.iso" download onclick="trackDownload(event)">Arch Linux</a></td>
+                        <td>900 MB</td>
+                        <td>Rolling Release</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-DVD-x86_64-Current.iso" download onclick="trackDownload(event)">openSUSE Leap 15.4</a></td>
+                        <td>4.3 GB</td>
+                        <td>June 8, 2022</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://downloads.kali.org/kali-linux-2023.2/kali-linux-2023.2-installer-amd64.iso" download onclick="trackDownload(event)">Kali Linux 2023.2</a></td>
+                        <td>3.5 GB</td>
+                        <td>May 16, 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Browsers -->
+            <h2>Browsers</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://dl.google.com/chrome/install/googlechromestandaloneenterprise64.msi" download onclick="trackDownload(event)">Google Chrome</a></td>
+                        <td>85 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://download-installer.cdn.mozilla.net/pub/firefox/releases/117.0/win64/en-US/Firefox%20Setup%20117.0.exe" download onclick="trackDownload(event)">Mozilla Firefox</a></td>
+                        <td>55 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://laptop-updates.brave.com/latest/winx64" download onclick="trackDownload(event)">Brave Browser</a></td>
+                        <td>87 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Development Tools -->
+            <h2>Development Tools</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://aka.ms/vs/17/release/vs_installer.exe" download onclick="trackDownload(event)">Visual Studio 2022</a></td>
+                        <td>1.5 MB (Bootstrapper)</td>
+                        <td>Latest</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://update.code.visualstudio.com/latest/win32-x64/stable" download onclick="trackDownload(event)">VS Code for Windows</a></td>
+                        <td>75 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://update.code.visualstudio.com/latest/linux-deb-x64/stable" download onclick="trackDownload(event)">VS Code for Linux (Debian/Ubuntu)</a></td>
+                        <td>80 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://update.code.visualstudio.com/latest/darwin/stable" download onclick="trackDownload(event)">VS Code for macOS</a></td>
+                        <td>94 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Useful Software -->
+            <h2>Useful Software</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://ftp.gimp.org/pub/gimp/v2.10/windows/gimp-2.10.30-setup.exe" download onclick="trackDownload(event)">GIMP (Image Editor)</a></td>
+                        <td>245 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://download.blender.org/release/Blender3.5/blender-3.5.0-windows-x64.msi" download onclick="trackDownload(event)">Blender (3D Graphics Tool)</a></td>
+                        <td>260 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://www.7-zip.org/a/7z2107-x64.exe" download onclick="trackDownload(event)">7-Zip (Archiving Tool)</a></td>
+                        <td>1.4 MB</td>
+                        <td>Latest</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- macOS ISOs -->
-        <h3>macOS</h3>
-        <div class="download-section">
-            <label for="macOs">Select macOS Version:</label>
-            <select id="macOs">
-                <option value="bigsur">Big Sur</option>
-                <option value="monterey">Monterey</option>
-                <option value="ventura">Ventura</option>
-                <option value="mojave">Mojave</option>
-                <option value="catalina">Catalina</option>
-            </select>
-            <button onclick="downloadMacOS()">Download</button>
-        </div>
-        <div class="file">
-            <h4>Direct Links:</h4>
-            <a href="https://archive.org/download/Big_Sur/Big_Sur.iso" download>Big Sur ISO</a><br>
-            <a href="https://archive.org/download/Monterey/Monterey.iso" download>Monterey ISO</a><br>
-            <a href="https://archive.org/download/Ventura/Ventura.iso" download>Ventura ISO</a><br>
-            <a href="https://archive.org/download/Mojave/Mojave.iso" download>Mojave ISO</a><br>
-            <a href="https://archive.org/download/Catalina/Catalina.iso" download>Catalina ISO</a>
-        </div>
-
-        <!-- Linux Distros -->
-        <h3>Linux</h3>
-        <div class="download-section">
-            <label for="linuxOs">Select Linux Distro:</label>
-            <select id="linuxOs">
-                <option value="ubuntu">Ubuntu</option>
-                <option value="fedora">Fedora</option>
-                <option value="debian">Debian</option>
-                <option value="arch">Arch Linux</option>
-                <option value="opensuse">openSUSE</option>
-                <option value="kali">Kali Linux</option>
-            </select>
-            <button onclick="downloadLinuxOS()">Download</button>
-        </div>
-        <div class="file">
-            <h4>Direct Links:</h4>
-            <a href="https://releases.ubuntu.com/22.04/ubuntu-22.04-desktop-amd64.iso" download>Ubuntu ISO</a><br>
-            <a href="https://download.fedoraproject.org/pub/fedora/linux/releases/37/Spins/x86_64/iso/Fedora-Workstation-Live-x86_64-37-1.6.iso" download>Fedora ISO</a><br>
-            <a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso" download>Debian ISO</a><br>
-            <a href="https://archlinux.org/iso/latest/archlinux-x86_64.iso" download>Arch Linux ISO</a><br>
-            <a href="https://download.opensuse.org/distribution/leap/15.4/iso/openSUSE-Leap-15.4-NET-x86_64.iso" download>openSUSE ISO</a><br>
-            <a href="https://cdimage.kali.org/kali-2023.1/kali-linux-2023.1-installer-amd64.iso" download>Kali Linux ISO</a>
-        </div>
+        <footer>
+            <p>Download responsibly!</p>
+            <p>Report bugs & corrupted files or suggest software: <a href="mailto:contact@someg.uy">contact@enderman.ch</a></p>
+            <p>&copy; Someguy Corp 2022-2024</p>
+        </footer>
     </div>
 
-    <!-- Browsers -->
-    <div class="category">
-        <h2>Browsers</h2>
-        <div class="download-section">
-            <label for="browser">Select Browser:</label>
-            <select id="browser">
-                <option value="chrome">Google Chrome</option>
-                <option value="firefox">Mozilla Firefox</option>
-                <option value="brave">Brave</option>
-            </select>
-            <button onclick="downloadBrowser()">Download</button>
-        </div>
-        <div class="file">
-            <h3>Direct Links:</h3>
-            <a href="https://dl.google.com/chrome/install/standalonesetup64.exe" download>Google Chrome</a><br>
-            <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US" download>Mozilla Firefox</a><br>
-            <a href="https://laptop-updates.brave.com/download/latest/BraveSetup.exe" download>Brave</a>
-        </div>
-    </div>
-
-    <!-- Development Tools -->
-    <div class="category">
-        <h2>Development Tools</h2>
-        <div class="download-section">
-            <label for="devTools">Select Development Tool:</label>
-            <select id="devTools">
-                <option value="vs2022">Visual Studio 2022</option>
-                <option value="vscode">VS Code</option>
-            </select>
-            <button onclick="downloadDevTools()">Download</button>
-        </div>
-        <div class="file">
-            <h3>Direct Links:</h3>
-            <a href="https://visualstudio.microsoft.com/vs/older-downloads/" download>Visual Studio 2022</a><br>
-            <a href="https://code.visualstudio.com/sha/download?build=stable&os=win32-x64" download>VS Code for Windows</a><br>
-            <a href="https://code.visualstudio.com/sha/download?build=stable&os=linux-x64" download>VS Code for Linux</a><br>
-            <a href="https://code.visualstudio.com/sha/download?build=stable&os=darwin" download>VS Code for macOS</a>
-        </div>
-    </div>
-
-    <!-- Useful Software -->
-    <div class="category">
-        <h2>Useful Software</h2>
-        <div class="download-section">
-            <label for="usefulSoftware">Select Software:</label>
-            <select id="usefulSoftware">
-                <option value="gimp">GIMP</option>
-                <option value="blender">Blender</option>
-                <option value="7zip">7-Zip</option>
-            </select>
-            <button onclick="downloadUsefulSoftware()">Download</button>
-        </div>
-        <div class="file">
-            <h3>Direct Links:</h3>
-            <a href
+    <script src="script.js"></script>
+</body>
+</html>
